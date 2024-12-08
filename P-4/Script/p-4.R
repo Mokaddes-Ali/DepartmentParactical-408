@@ -1,16 +1,16 @@
 library(sf)
-div_map<-read_sf("C:/Users/ASUS_VivoBook/Desktop/408 (practical)/problem 1-6/data/BD_shp/adm1.shp")
+div_map<-read_sf("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\BD_shp\\adm1.shp")
 
 # Create divisional area in km2
 div_map$Shape_Areakm2  <- div_map$Shape_Area * 10000
 
-divpoper_BD<-read.csv("C:/Users/ASUS_VivoBook/Desktop/408 (practical)/problem 1-6/data/maleFemalePop.csv")
-
+divpoper_BD<-read.csv("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\census.csv")
+name(divpoper_BD)
 library(dplyr)
 
 divpoper_GE_BD<-left_join(div_map,divpoper_BD)
 
-divpoper_GE_BD$density<- (divpoper_GE_BD$Total.population%/%divpoper_GE_BD$Shape_Area)
+divpoper_GE_BD$density<- (divpoper_GE_BD$Total%/%divpoper_GE_BD$Shape_Area)
 
 library(tmap) 
 #Percentage

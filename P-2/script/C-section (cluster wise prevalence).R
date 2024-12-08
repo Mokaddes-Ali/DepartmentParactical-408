@@ -1,15 +1,15 @@
 
-cSec17 <- read.csv("C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-2\\data\\cSec.csv")
+cSec17 <- read.csv("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\cSec.csv")
 
 library(sf)          
-locations_longlat <- read_sf( "C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-1\\Data\\BDGE7SFL\\BDGE7SFL.shp" )
+locations_longlat <- read_sf( "E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\BDGE7SFL\\BDGE7SFL.shp" )
 
 library(dplyr)
 cSec_longlatBDHS17 <-  left_join(locations_longlat, 
                                   cSec17, 
                                   join_by(DHSCLUST == dhsclust))
 # load division shapefile
-div_map <- read_sf( "C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-1\\Data\\BD_shp\\adm1.shp" )
+div_map <- read_sf( "E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\BD_shp\\adm1.shp" )
 
 library(tmap)
 Output <- tm_shape(div_map) +       
@@ -19,4 +19,4 @@ Output <- tm_shape(div_map) +
 
 
 
-tmap_save(Output,"C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-2\\Output\\CsecMap.png")
+tmap_save(Output,"E:\\Department Final Year\\408 Practical\\problem 1-6\\P-1\Output\\mp1.png")

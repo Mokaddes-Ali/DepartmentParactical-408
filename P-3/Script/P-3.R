@@ -1,15 +1,18 @@
 library(sf)
-div_map<-read_sf("C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-1\\Data\\BD_shp\\adm1.shp")
+div_map<-read_sf("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\BD_shp\\adm1.shp")
+names(div_map)
 
-divpoper_BD<-read.csv("C:/Users/ASUS_VivoBook/Desktop/408 (practical)/problem 1-6/P-3/Data/maleFemalePer.csv")
+
+divpoper_BD<-read.csv("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\census.csv")
 
 library(dplyr)
 divpoper_GE_BD <- left_join(div_map,divpoper_BD)
+names(divpoper_GE_BD)
 
 library(tmap) 
 #Male
 Male<- tm_shape(divpoper_GE_BD)+
-  tm_polygons("Male.per")+
+  tm_polygons("Male.per", title = "Male Percentage", palette = "Blues")+
   tm_borders()
 
 #Female

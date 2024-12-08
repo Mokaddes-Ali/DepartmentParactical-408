@@ -19,4 +19,4 @@ Output <- tm_shape(div_map) +
 
 
 
-tmap_save(Output,"E:\\Department Final Year\\408 Practical\\problem 1-6\\P-1\Output\\mp1.png")
+tmap_save(Output,"E:\\Department Final Year\\408 Practical\\problem 1-6\\P-2\Output\\cSecMap 1.png")

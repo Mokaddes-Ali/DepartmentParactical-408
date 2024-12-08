@@ -18,7 +18,7 @@ bd_map <- tm_shape(div_map) +
           tm_dots(col = "blue")
 
   
-tmap_save(bd_map,"C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-1\\Output\\map3.png")
+tmap_save(bd_map,"E:\\Department Final Year\\408 Practical\\problem 1-6\\P-1\Output\\mp4.png")
 
 
 

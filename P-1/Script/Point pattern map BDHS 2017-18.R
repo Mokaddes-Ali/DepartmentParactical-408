@@ -2,7 +2,7 @@ library(sf)
 library(tmap)
 
 # load BDHS clusters shapefile
-GE_BDHS17 <- read_sf("C:\\Users\\ASUS_VivoBook\\Desktop\\408 (practical)\\problem 1-6\\P-1\\Data\\BDGE7SFL\\BDGE7SFL.shp")
+GE_BDHS17 <- read_sf("E:\\Department Final Year\\408 Practical\\problem 1-6\\data\\BDGE7SFL\\BDGE7SFL.shp")
 tm_shape(GE_BDHS17) +  
   tm_dots()
 

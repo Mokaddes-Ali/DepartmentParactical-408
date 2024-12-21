@@ -12,11 +12,11 @@ divpoper_GE_BD <- left_join(div_map,divpoper_BD)
 library(tmap) 
 #Male
 Male<- tm_shape(divpoper_GE_BD)+
-  tm_polygons("Male.per", title = "Male Percentage", palette = "Blues")+
+  tm_polygons("Male.per", palette = "Blues")+
   tm_borders()
 
 #Female
 Female<- tm_shape(divpoper_GE_BD)+
-  tm_polygons("Female.per")+
+  tm_polygons("Female.per", palette = "Blues")+
   tm_borders()
 

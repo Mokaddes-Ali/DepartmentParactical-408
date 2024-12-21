@@ -7,7 +7,7 @@ divpoper_BD<-read.csv("E:\\Department Final Year\\408 Practical\\problem 1-6\\da
 
 library(dplyr)
 divpoper_GE_BD <- left_join(div_map,divpoper_BD)
-names(divpoper_GE_BD)
+
 
 library(tmap) 
 #Male

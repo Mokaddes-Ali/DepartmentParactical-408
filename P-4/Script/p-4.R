@@ -13,6 +13,7 @@ divpoper_GE_BD<-left_join(div_map,divpoper_BD)
 divpoper_GE_BD$density<- (divpoper_GE_BD$Total%/%divpoper_GE_BD$Shape_Area)
 
 library(tmap) 
+
 #Percentage
 Percentage<- tm_shape(divpoper_GE_BD)+
   tm_polygons("Percentage")+
